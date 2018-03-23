@@ -2,7 +2,7 @@ import {
   ITEMS_HAS_ERRORED,
   ITEMS_IS_LOADING,
   ITEMS_FETCH_DATA_SUCCESS,
-} from '../constants/actionTypes/items';
+} from '../types/items';
 
 export function itemsHasErrored(bool) {
   return {

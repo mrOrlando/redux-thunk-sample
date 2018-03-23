@@ -2,9 +2,9 @@ import {
   ITEMS_HAS_ERRORED,
   ITEMS_IS_LOADING,
   ITEMS_FETCH_DATA_SUCCESS,
-} from '../constants/actionTypes/items';
+} from '../types/items';
 
-export function itemsHasErrored(state = false, action) {
+export function itemsHasErroredReducer(state = false, action) {
   switch (action.type) {
     case ITEMS_HAS_ERRORED:
       return action.hasErrored;
@@ -14,7 +14,7 @@ export function itemsHasErrored(state = false, action) {
   }
 }
 
-export function itemsIsLoading(state = false, action) {
+export function itemsIsLoadingReducer(state = false, action) {
   switch (action.type) {
     case ITEMS_IS_LOADING:
       return action.isLoading;
@@ -24,7 +24,7 @@ export function itemsIsLoading(state = false, action) {
   }
 }
 
-export function items(state = [], action) {
+export function itemsReducer(state = [], action) {
   switch (action.type) {
     case ITEMS_FETCH_DATA_SUCCESS:
       return action.items;
