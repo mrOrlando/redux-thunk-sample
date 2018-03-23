@@ -2,6 +2,7 @@ import {
   ITEMS_HAS_ERRORED,
   ITEMS_IS_LOADING,
   ITEMS_FETCH_DATA_SUCCESS,
+  REMOVE_ITEM,
 } from '../types/items';
 
 export function itemsHasErrored(bool) {
@@ -22,6 +23,13 @@ export function itemsFetchDataSuccess(items) {
   return {
     type: ITEMS_FETCH_DATA_SUCCESS,
     items,
+  };
+}
+
+export function removeItem(itemId) {
+  return {
+    type: REMOVE_ITEM,
+    itemId,
   };
 }
 

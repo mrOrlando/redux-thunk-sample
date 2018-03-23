@@ -2,6 +2,7 @@ import {
   ITEMS_HAS_ERRORED,
   ITEMS_IS_LOADING,
   ITEMS_FETCH_DATA_SUCCESS,
+  REMOVE_ITEM,
 } from '../types/items';
 
 export function itemsHasErroredReducer(state = false, action) {
@@ -28,6 +29,9 @@ export function itemsReducer(state = [], action) {
   switch (action.type) {
     case ITEMS_FETCH_DATA_SUCCESS:
       return action.items;
+
+    case REMOVE_ITEM:
+      return state.filter(item => item.id !== action.itemId);
 
     default:
       return state;

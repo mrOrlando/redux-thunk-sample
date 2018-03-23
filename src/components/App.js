@@ -1,8 +1,8 @@
 import React from 'react';
-import ItemList from '../containers/ItemList';
+import List from '../containers/List';
 
 export default () => (
   <div className="app">
-    <ItemList />
+    <List />
   </div>
 );

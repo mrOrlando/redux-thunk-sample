@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import ItemList from '../components/ItemList';
-import { itemsFetchData } from '../actions/items';
+import ItemList from '../components/List';
+import { itemsFetchData, removeItem } from '../actions/items';
 
 const mapStateToProps = state => ({
   items: state.items,
@@ -10,6 +10,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchData: url => dispatch(itemsFetchData(url)),
+  removeItem: itemId => dispatch(removeItem(itemId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemList);
